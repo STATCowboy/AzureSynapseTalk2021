@@ -1,0 +1,20 @@
+# Spark
+# Source = https://docs.microsoft.com/en-us/azure/synapse-analytics/get-started-analyze-spark
+
+# SQL Dedicated
+#
+CREATE TABLE [dbo].[WELL_MASTER](
+	[WELL_ID] [int] NOT NULL,
+	[WELL_NAME] [varchar](100) NULL,
+	[DIVISION] [varchar](100) NULL,
+	[REGION] [varchar](100) NULL,
+	[ASSET_GROUP] [varchar](100) NULL,
+	[ASSET_TEAM] [varchar](100) NULL,
+	[PROD_YEAR] [varchar](4) NULL,
+	[TVD] [float] NULL)
+WITH
+(
+    DISTRIBUTION = ROUND_ROBIN,
+    CLUSTERED COLUMNSTORE INDEX
+);
+GO
