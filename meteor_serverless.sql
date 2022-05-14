@@ -30,7 +30,7 @@ GO
 CREATE VIEW meteor_data
 AS
 -- This is auto-generated code
-SELECT TOP 100
+SELECT 
     -- jsonContent
      JSON_VALUE (jsonContent, '$.name') AS name
     , JSON_VALUE (jsonContent, '$.year') AS year
